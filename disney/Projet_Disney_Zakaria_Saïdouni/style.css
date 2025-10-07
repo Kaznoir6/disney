@@ -1,0 +1,678 @@
+/* --- Styles généraux --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    color: white; 
+    background-color: #040714; 
+    min-height: 100vh; 
+    position: relative; 
+}
+
+/* --- Section Page d'Accueil avec Image de Fond --- */
+.page-accueil {
+    background-image: url(img/original_2.jpeg); /* REMPLACEZ CE CHEMIN */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply; 
+}
+
+/* --- Header et Bouton S'IDENTIFIER --- */
+.header-identification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 30px; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    z-index: 10;
+}
+
+.btn-identification {
+    padding: 8px 25px; 
+    border: 1px solid white; 
+    border-radius: 4px;
+    color: white; 
+    background-color: black; 
+    text-decoration: none;
+    font-weight: 700; 
+    font-size: 13px;
+    letter-spacing: 1px; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-identification:hover {
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    border-color: white; 
+}
+
+/* --- Section principale et Texte --- */
+.contenu-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative; 
+    
+}
+
+.message-central {
+   max-width: 2000px; 
+    padding: 10px;
+    /* Ajustement de la position verticale pour remonter le contenu */
+    margin-top: -150px; 
+    margin-top: 15%;
+}
+
+h1 {
+    /* Nouvelle taille de police pour le titre */
+    font-size: 3rem; 
+    line-height: 1.1; 
+    margin: 0 0 20px 0; 
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: 1.2rem; 
+    font-weight: 400;
+    margin-bottom: 25px; 
+}
+
+.instruction {
+    font-size: 1rem; 
+    color: rgba(255, 255, 255, 0.8); 
+    margin-bottom: 20px;
+}
+
+/* --- Formulaire et Alignement --- */
+.formulaire-email {
+    display: flex;
+    margin: 0 auto;
+    max-width: 500px; 
+    border-radius: 4px; 
+    overflow: hidden; 
+}
+
+#email-address {
+    flex-grow: 1; 
+    padding: 18px 15px; 
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    border-radius: 0; 
+}
+
+#email-address::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-inscription {
+    padding: 18px 25px; 
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(0, 0, 0); 
+    background-color: #05d6e8; 
+    border: none;
+    border-radius: 0; 
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-inscription:hover {
+    background-color: #02D6E8; 
+}
+
+/* --- Texte d'offre et Notes de bas de page (Textes grisés) --- */
+.offre-speciale {
+    font-size: 12px; 
+    color: rgba(255, 255, 255, 0.6); 
+    margin-top: 25px; 
+    margin-bottom: 10px;
+}
+
+.notes-bas-de-page {
+    margin-top: 15px; 
+    font-size: 11px; 
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+.notes-bas-de-page p {
+    font-size: 11px;
+    margin: 3px 0;
+}
+
+/* --- Flèche de défilement --- */
+.scroll-down {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 2; 
+}
+
+.arrow-down {
+    display: block;
+    font-size: 40px; 
+    line-height: 1; 
+    color: white;
+    text-decoration: none;
+    opacity: 0.8; 
+    transition: opacity 0.3s;
+    animation: bounce 2s infinite; 
+}
+
+.arrow-down:hover {
+    opacity: 1;
+}
+
+
+
+
+/* FIN PAGE DACCUEIL  */
+
+
+/* --- SECTION SECONDAIRE "SEULEMENT SUR DISNEY+ --- */
+
+.disney {
+    /* REMPLACEZ PAR LE CHEMIN DE L'IMAGE DE FOND POUR CETTE SECTION */
+    background-image: url(img/original_4.jpeg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; 
+    
+    padding-top: 150px; 
+    /* CORRECTION : Réduit le padding pour rapprocher le texte du bord gauche */
+    padding-left: 5%; 
+    
+    position: relative;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+}
+
+/* Le div conteneur pour le texte */
+.disney > div {
+    /* CORRECTION : Réduit la largeur du conteneur pour aider à couper la ligne de description */
+    max-width: 400px; 
+    padding: 0;
+    align-self: auto; 
+    margin-bottom: 0; 
+    text-align: left;
+}
+
+.disney h2 {
+    font-size: 2.5rem; 
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.disney .description {
+    /* CORRECTION : Réduit la taille de la police */
+    font-size: 0.95rem; 
+    line-height: 1.5;
+    margin-bottom: 15px; 
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.disney .copyright {
+    font-size: 0.4rem; 
+    color: rgba(255, 255, 255, 0.6); 
+}
+/* --- SECTION SECONDAIRE FIN "SEULEMENT SUR DISNEY+" --- */
+
+
+/* --- SECTION ABONNEMENT --- */
+
+.Abonnement {
+    background-color: #040714;
+    color: #fff;
+    padding: 80px 0;
+    font-family: Arial, sans-serif;
+}
+
+.abonnement-container {
+    max-width: 1000px; /* Limite la largeur du contenu */
+    margin: 0 auto;
+}
+
+.Abonnement h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ---- TABLEAU D'ABONNEMENT ----*/
+
+.table-wrapper {
+    overflow-x: auto; /* Pour le défilement horizontal sur petits écrans */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: transparent; /* Le fond est géré par la section */
+    text-align: center;
+}
+
+/* Style de l'en-tête */
+thead th {
+    padding: 15px;
+    border-bottom: 2px solid #333;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Style des cellules de données */
+tbody td {
+    padding: 18px 10px; /* Plus d'espace vertical */
+    border-top: 1px solid #333;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Première colonne (Description des fonctionnalités) */
+tbody td:first-child {
+    text-align: left; /* Alignement à gauche comme sur l'image */
+    font-weight: 400; /* Poids normal */
+    color: #ccc; /* Texte gris clair */
+}
+
+/* Colonne Premium (Arrière-plan sombre) */
+table th.premium-col,
+table td:nth-child(4) {
+    background-color: #1a1e23; /* Couleur de fond foncée pour la colonne Premium */
+}
+
+/* Ligne des prix */
+.price-row td {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 25px 10px; /* Plus de padding pour cette ligne */
+}
+
+/* Liens de prix */
+.price-row a {
+    color: #fff;
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: 600;
+}
+
+/* Style pour la coche (✔) */
+.feature-check {
+    color: #ffffff; /* Couleur bleue pour la coche */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* --- NOTES SOUS LE TABLEAU --- */
+.notes {
+    text-align: left;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.note-simple {
+    font-size: 0.9em;
+    color: #AAA;
+    margin-bottom: 15px;
+}
+
+.note-detail {
+    font-size: 0.75em; /* Très petite taille pour le texte légal */
+    line-height: 1.4;
+    color: #777; /* Couleur très grisée */
+}
+
+.note-detail a {
+    color: #ffffff; /* Lien bleu dans le texte légal */
+    text-decoration: underline;
+}
+
+/*FIN TABLEAU */
+
+
+
+
+/*--ADS--*/
+
+
+/* --- SECTION 3 : REGARDEZ SELON VOS ENVIES (.ADS) --- */
+.ADS {
+    background-color: #040714; /* Fond bleu nuit très foncé */
+    color: white;
+    padding: 80px 0; /* Espacement en haut et en bas de la section */
+    text-align: center; /* Centre le titre et la description par défaut */
+}
+
+/* --- Tête de section (Titre et slogan) --- */
+.ADS .header-ads {
+    margin-bottom: 50px;
+}
+
+.ADS h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.ADS .header-ads p {
+    font-size: 1.1rem;
+    color: #CCC;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* --- Image centrale (Composition des appareils) --- */
+.ADS .content-row {
+    margin-bottom: 80px; /* Espace entre l'image et les avantages */
+}
+
+.ADS .main-content-image {
+    max-width: 80%; /* Assure que l'image est responsive */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Ajustement de la hauteur si nécessaire, basé sur la composition */
+}
+
+/* --- Ligne des bénéfices (Disposition horizontale) --- */
+.ADS .benefits-row {
+    display: flex;
+    justify-content: center; /* Centre les trois colonnes */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.ADS .benefit-item {
+    flex: 1; /* Chaque élément prend un tiers de l'espace disponible */
+    padding: 0 20px;
+    text-align: center;
+}
+
+.ADS .benefit-icon {
+    /* Stylisation de l'icône si c'est une image */
+    width: 60px; /* Taille de l'icône */
+    height: auto;
+    margin-bottom: 15px;
+    /* Si l'icône est entourée d'un cercle (comme dans l'image) */
+    /* border: 1px solid #0072d2; */
+    /* border-radius: 50%; */
+    /* padding: 10px; */
+}
+
+/* --- Texte des bénéfices --- */
+.ADS .benefit-item p:first-of-type {
+    /* Titre du bénéfice (ex: Un divertissement sans fin) */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.ADS .benefit-item .detail {
+    /* Texte de description (ex: Découvrez des milliers d'heures...) */
+    font-size: 0.9rem;
+    color: #AAA;
+    line-height: 1.4;
+}
+
+/*-- FIN ADS --*/
+
+
+
+/*onglet FAQ
+<style>
+  /* ----------------------------------------------------------------- */
+  /* Styles pour l'élargissement, le fond, etc. (Conservé et amélioré) */
+  /* ----------------------------------------------------------------- */
+  .FAQ {
+    min-width: 100vh;
+    margin: 20px auto;
+    background-color: #040714; 
+    color: white; 
+    font-family: "InspireTWDC";
+    border-radius: 4px;
+    padding: 0; /* On retire le padding du conteneur pour que les details touchent les bords */
+  }
+
+  .FAQ h4 {
+    font-size: 1.5em;
+    padding: 20px 20px 10px;
+    margin: 0;
+  }
+  
+  /* ----------------------------------------------------------------- */
+  /* NOUVEAU : Ajout de l'écart entre les blocs */
+  /* ----------------------------------------------------------------- */
+  
+  /* Cible chaque élément <details> */
+  .FAQ details {
+    
+    margin-bottom: 8px; 
+    background-color: #13151D; /* Un très léger fond différent pour accentuer l'espacement */
+    border-radius: 4px; /* Arrondi pour séparer visuellement */
+    /* Retire la bordure de séparation interne pour ne conserver que l'écart */
+    border: none; 
+    padding: 0 20px;
+    overflow: hidden; /* Assure que le border-radius fonctionne bien */
+  }
+  /* Retire la marge du dernier élément pour éviter un espace inutile en bas du conteneur */
+  .FAQ details:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* ----------------------------------------------------------------- */
+  /* Styles du titre (Summary) et de la réponse (Contenu) */
+  /* ----------------------------------------------------------------- */
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 0;
+    list-style: none;
+    user-select: none;
+    outline: none;
+  }
+
+  summary::after {
+    content: '+';
+    font-size: 1.5em;
+    line-height: 1;
+    margin-left: 15px;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: '−';
+  }
+
+  .reponse-contenu {
+    padding-bottom: 20px;
+    border-top: 1px solid #333; /* Ajoute une ligne fine entre le titre et la réponse, comme souvent vu */
+    padding-top: 20px;
+  }
+
+  .reponse-contenu p, 
+  .reponse-contenu ul,
+  .reponse-contenu ol {
+    margin-top: 0;
+  }
+  
+  /* Styles de listes et liens... (comme précédemment) */
+  .reponse-contenu ul, .reponse-contenu ol {
+    list-style-position: inside;
+    padding-left: 20px;
+  }
+  .reponse-contenu li {
+    padding-bottom: 8px;
+    margin-left: -20px;
+  }
+  .reponse-contenu a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+
+
+/* ---  ACCESSIBLE SUR VOS APPAREILS PRÉFÉRÉS  --- */
+
+
+.appareils {
+    min-height: 100vh; 
+    --icon-size: 80px; 
+    background-color: #040714;
+    color: white;
+    padding: 100px 0;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+/* Le titre est centré grâce à text-align: center sur le parent (.appareils) */
+.appareils h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.appareils-row {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.appareil-item {
+    flex: 1; 
+    padding: 0 15px;
+    text-align: center;
+}
+
+/* --- LOGOS / ICÔNES --- */
+.appareil-icon {
+    width: 250px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; 
+}
+
+/* --- Titres des catégories (Télévisions, Ordinateurs, etc.) --- */
+.appareil-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+/* --- Liste des appareils --- */
+.liste-appareils {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.liste-appareils li {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #AAA; 
+}
+
+
+
+
+
+
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: #040714; /* Couleur de fond sombre du footer */
+    color: #AAA;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centre tous les éléments comme le logo et les liens */
+    padding: 0 20px;
+}
+
+/* --- Logo --- */
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    /* Ajustez la taille du logo selon votre fichier */
+    width: 80px; 
+    height: auto;
+}
+
+/* --- Lignes de liens --- */
+.footer-links-row {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0; /* Petit espace entre les lignes de liens */
+    display: flex;
+    justify-content: center; /* Centre les liens horizontalement */
+    flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur les petits écrans */
+}
+
+.footer-links-row li {
+    padding: 0 12px; /* Espacement entre chaque lien */
+    margin-bottom: 5px; /* Pour l'espacement lors du retour à la ligne */
+}
+
+.footer-links-row a {
+    color: #AAA; /* Couleur des liens (gris clair) */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links-row a:hover {
+    color: white; /* Effet de survol */
+}
+
+/* --- Sélecteur de langue (si utilisé) --- */
+.language-selector a {
+    font-weight: bold; /* Le texte de la langue est souvent en gras */
+    color: white !important; /* Pour le faire ressortir */
+}
+
+/* --- Gérer les préférences de confidentialité --- */
+.privacy-settings {
+    /* Style spécifique si le lien de confidentialité est un bouton */
+    /* text-decoration: underline; */ 
+}
+
+/* --- Note et Copyright --- */
+.footer-note, .footer-copyright {
+    font-size: 0.75rem; /* Plus petit */
+    color: #777; /* Plus foncé */
+    margin: 5px 0;
+}
+
+.footer-note {
+    margin-top: 30px;
+}
