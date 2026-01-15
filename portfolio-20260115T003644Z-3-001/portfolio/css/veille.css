@@ -1,0 +1,85 @@
+/* --- SECTION OUTILS DE VEILLE --- */
+.tools-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.tool-card {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border: 1px solid #2a475e;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.tool-card:hover {
+    border-color: var(--steam-blue);
+}
+
+.tool-card h4 {
+    color: var(--steam-blue);
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+/* --- FIL D'ACTUALITÉ (TIMELINE) --- */
+.news-list {
+    margin-top: 30px;
+    border-left: 2px solid #2a475e;
+    padding-left: 30px;
+    position: relative;
+}
+
+.news-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Le petit point sur la ligne de temps */
+.news-item::before {
+    content: "";
+    position: absolute;
+    left: -37px; /* Ajusté pour s'aligner sur la bordure gauche */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--steam-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--steam-blue);
+}
+
+.date {
+    font-size: 0.8rem;
+    color: var(--steam-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.news-content h4 {
+    color: #fff;
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+.news-content p {
+    color: #acb2b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Lien "Lire la suite" style Steam */
+.read-more {
+    color: #66c0f4;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
